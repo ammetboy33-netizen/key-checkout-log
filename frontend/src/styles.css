@@ -1,0 +1,162 @@
+@import './styles.base.css';
+
+.kicker {
+  margin: 0;
+  color: var(--accent);
+  font-weight: 600;
+}
+.notice-line {
+  min-height: 1.5rem;
+  margin: 0.5rem 0;
+  color: var(--accent);
+  font-weight: 600;
+}
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: flex-end;
+  margin-bottom: 0.75rem;
+}
+.filters .field--grow {
+  flex: 1 1 16rem;
+}
+.filters > .btn {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+.check {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 2.75rem;
+}
+.check input {
+  width: 1.15rem;
+  height: 1.15rem;
+}
+.keys {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+  display: grid;
+  gap: 0.6rem;
+}
+.key {
+  margin: 0;
+}
+.key__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.key__head h2 {
+  margin: 0;
+  font-size: 1.15rem;
+}
+.key__room {
+  font-weight: 400;
+  color: var(--muted);
+}
+.pill {
+  white-space: nowrap;
+}
+.copies {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0;
+}
+.copy {
+  border-top: 1px solid var(--line);
+  padding: 0.45rem 0;
+}
+.copy--overdue {
+  background: var(--bad-soft);
+  border-radius: 6px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.copy__line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.6rem;
+}
+.copy__actions {
+  margin-left: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+.issue {
+  margin-top: 0.5rem;
+  background: #f7faf8;
+  border-radius: 8px;
+  padding: 0.5rem;
+}
+.row .field--due {
+  flex: 0 1 15rem;
+}
+.row .field--num {
+  flex: 0 1 8rem;
+}
+.ok {
+  color: #1d6b3f;
+  font-weight: 600;
+}
+.bad {
+  color: var(--bad);
+  font-weight: 600;
+}
+.warn {
+  color: var(--warn);
+  font-weight: 600;
+  flex-basis: 100%;
+  margin: 0;
+}
+.banner {
+  color: var(--bad);
+  background: var(--bad-soft);
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+  font-weight: 600;
+}
+.row--overdue td {
+  background: var(--bad-soft);
+}
+.staff {
+  columns: 2 16rem;
+  padding-left: 1.2rem;
+}
+/* На узком экране строки таблиц выдач и истории — карточками, без горизонтальной прокрутки. */
+@media (max-width: 640px) {
+  table.data.cards-sm thead {
+    display: none;
+  }
+  table.data.cards-sm,
+  table.data.cards-sm tbody,
+  table.data.cards-sm tr,
+  table.data.cards-sm td {
+    display: block;
+    width: 100%;
+  }
+  table.data.cards-sm tr {
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 0.4rem 0.6rem;
+    margin-bottom: 0.5rem;
+  }
+  table.data.cards-sm td {
+    border: 0;
+    padding: 0.15rem 0;
+  }
+}
+.presets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  align-items: flex-end;
+}
